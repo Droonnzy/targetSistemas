@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class MyClass {
+  public static void main(String args[]) {
+    /*
+    1) Dado a sequencia de Fibonacci, onde se inicia por 0 e 1 e o proximo valor sempre sera a soma dos 2 valores anteriores
+    (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um numero, ele calcule 
+    a sequencia de Fibonacci e retorne uma mensagem avisando se o numero informado pertence ou nao a sequencia.
+    */
+    Scanner leia = new Scanner(System.in);
+    sequenciaFibonacci seqF = new sequenciaFibonacci();
+    
+    
+    System.out.println("Digite o valor para ser consultado: ");
+    int numeroInicial = leia.nextInt();
+    seqF.valorUsuario = numeroInicial;
+    
+    //resultado da consulta
+    if (seqF.calculo() != seqF.valorUsuario){
+    System.out.println("O " + seqF.valorUsuario + " nao pertence a sequencia de fibonacci");
+    }
+    else{
+        System.out.println("O " + seqF.valorUsuario + ", pertence a sequencia de fibonacci");
+    }
+    
+    //mostra onde a sequencia parou
+    System.out.println(seqF.calculo());
+  }
+  static class sequenciaFibonacci{
+      public int valorUsuario;
+      
+      //calcula a sequencia
+      public int calculo(){
+          
+          int n1 = 0; 
+          int n2 = 1; 
+          int soma = 0;
+          
+          while (soma <= valorUsuario){
+              if(soma == valorUsuario){
+                  return soma;
+              }
+              soma = n1 + n2;
+              n1 = n2;
+              n2 = soma;
+          }
+          return soma;
+      }
+  }
+}
