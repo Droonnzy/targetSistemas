@@ -1,0 +1,6 @@
+public class MyClass {
+  public static void main(String args[]) {
+    System.out.println("O resultado de SOMA é o mesmo valor que K, ou seja, 12.");
+    
+  }
+}
