@@ -1,0 +1,15 @@
+public class MyClass {
+  public static void main(String args[]) {
+    String palavra = "Quantas letras A's existem nessa frase?";
+    int qntCaractere = palavra.length();
+    int cont = 0;
+    for(int i = 1; i <= qntCaractere; i++){
+        int aux = i;
+        char conferencia = palavra.substring((aux - 1), i).charAt(0);
+        if (conferencia == 'a' || conferencia == 'A'){
+            cont += 1;
+        }
+    }
+    System.out.println("A quantidade de vezes que a letra A, minuscula ou maiuscula e igual a: " + cont);
+  }
+}
