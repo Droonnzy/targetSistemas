@@ -1,6 +1,4 @@
-public class MyClass {
-  public static void main(String args[]) {
-    System.out.println("O resultado de SOMA é o mesmo valor que K, ou seja, 12.");
-    
-  }
-}
+3) Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);
+
+O resultado de SOMA é o mesmo valor que K, ou seja, 13.
+Pois o loop vai repetir k for menor que Indice, e indice vale 12.
